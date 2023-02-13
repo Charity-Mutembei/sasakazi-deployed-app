@@ -77,6 +77,16 @@ class AccountListCreateAPIView(APIView):
         serializer = AccountsSerializer(accounts, many=True)
         return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
 
+    def patch (self, request, id=None):
+        items = Accounts.objects.get(id=id)
+        serializer = AccountsSerializer(item, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"status": ""success, "data": serializer.data})
+
+        else:
+            return Response({"status": "error", "data": serializer.errors})
+
 
 class CardListCreateAPIView(APIView):
     def post(self, request):
