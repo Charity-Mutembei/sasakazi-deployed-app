@@ -56,7 +56,10 @@ class CustomerListCreateAPIView(APIView):
         serializer = CustomerSerializer(customers, many=True)
         return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
   
-
+    def delete(self, request, id=None):
+        customer = get_object_or_404(Customer, id=id)
+        customer.delete()
+        return Response({"status": "success", "data": "Client Deleted"})
 
 class AccountListCreateAPIView(APIView):
     def post(self, request):
@@ -82,10 +85,15 @@ class AccountListCreateAPIView(APIView):
         serializer = AccountsSerializer(item, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
-            return Response({"status": ""success, "data": serializer.data})
+            return Response({"status": "success", "data": serializer.data})
 
         else:
             return Response({"status": "error", "data": serializer.errors})
+    
+    def delete(self, request, id=None):
+        account = get_object_or_404(Accounts, id=id)
+        account.delete()
+        return Response({"status": "success", "data": "Account deleted"})
 
 
 class CardListCreateAPIView(APIView):
@@ -108,6 +116,10 @@ class CardListCreateAPIView(APIView):
         serializer = CardsSerializer(cards, many=True)
         return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
 
+    def delete(self, request, id=None):
+        card = get_object_or_404(Cards, id=id)
+        card.delete()
+        return Response({"status": "sucess", "data": "Card deleted"})
 
 
             
