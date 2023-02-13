@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=SpaceGrotesk&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.motherShip{
+    display: flex;
+
+}
+#side_bars{
+    flex: 1;
+}
+#top_bars{
+    flex: 4;
+}
+#side_bar{
+    margin: 1vw;
+    border: 1px solid #000000;
+    box-shadow: 0px 12px 34px rgba(0, 0, 0, 0.04);
+    border-radius: 24px;
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+}
+#main_container{
+    padding: 1vw;
+    font-family: 'Poppins', sans-serif;    
+}
+#logo_section{
+    padding: 1vw;
+}
+.section_links{
+    line-height: 4vw;
+    font-size: 1.2vw;
+    margin-top: 8vw;
+}
+/* how to have the hover effect in react js css */
+.section_links #link:hover{
+    background-color: #90EE90;
+    color: black;
+    cursor: pointer;
+    border-radius: 1vw;
+    font-size: 1vw;
+    padding-left: 1vw;
+}
+.section_links a{
+    color: #000000;
+}
+.bottom_profile a {
+    color: #000000;
+}
+.section_links a svg {
+    margin-right: 1vw;
+    font-size: large;
+}
+.bottom_profile a svg {
+    margin-right: 1vw;
+    font-size: 5vw;
+    color: #90EE90;
+}
+.bottom_profile {
+    margin-top: 14vw;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.grid-template p { 
+    margin-top: 1.5vw;
+}
+
+
+.internship_label{
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+p {
+    font-size: 1.3vw;
+    /* font-weight: 600; */
+    letter-spacing: .2vw;
+}
+button {
+    background-color: #90EE90;
+    border: solid #90EE90;
+    display: flex;
+    margin-top: 1vw;
+    font-family: 'Poppins', sans-serif;
+    width: 15vw;
+    height: 2.5vw;
+    border-radius: .5vw;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+a :hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+svg {
+    margin-right: .5vw;
+    font-size: 1.5vw;
+    margin-top: .3vw;
+}
+span {
+    font-size: 1vw;
+    margin-top: .3vw;
+}
+
+
+/* form section */
+input.form_button{
+    background-color: #90EE90;
+    color: black;
+    font-size: 1vw;
+    border: none;
+    width: 10vw;
+    height: 2vw;
+    border-radius: .5vw;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* potential application */
+.popup{
+    visibility: hidden;
+}
+input.formButton{
+    background-color: #90EE90;
+    color: black;
+    font-size: 1vw;
+    border: none;
+    width: 10vw;
+    height: 2vw;
+    border-radius: .5vw;
+    font-family: 'Poppins', sans-serif;
+}
+.open-popup{
+    visibility: visible;
+}
